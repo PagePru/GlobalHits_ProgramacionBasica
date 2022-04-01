@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+</head>
+<body>
+    <h1>Body Mass Index Calculator</h1>
+    <p> <h1>To calculate your body mass index enter the following data:</h1></p>
+
+    <script>
+        var weightPerson  = parseFloat(prompt("Please, put your weight (Kgs)= "));
+        var heightPerson  = parseFloat(prompt("Please, put your height (mts)= "));
+        var bmi  = (parseFloat(weightPerson)/(heightPerson*heightPerson)).toFixed(2);
+        
+
+        if (bmi <= 18.5) {
+            var message = "low weight";
+        } 
+        else if (bmi > 18.5 & bmi <= 24.9){
+            var message = "normal weight";
+        }
+        else if (bmi > 24.9) {
+            var message = "very HIGH weight";
+        } 
+        document.write ("<BR>Your BMI (Body Mass Index) is = "+ bmi );
+        document.write ("<BR><BR>Your have a " + message);
+    </script>
+    
+</body>
+</html>
